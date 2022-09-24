@@ -3,6 +3,13 @@
 - 🏳‍🌈 **Downloading size**: Monitor download size
 - ⚡ **Downloading downloadProgress**
 
+## 📦 Install
+
+```bash
+npm i axios-downloader
+```
+
+
 ## 🦄 Usage
 
 ```ts
@@ -30,9 +37,7 @@ const downLoad = function () {
     })
 }
 ```
+## 🐱 Demo
 
-## 📦 Install
+[AxDownLoader](https://axios-downloader.netlify.app/#/index)
 
-```bash
-npm i axios-downloader
-```

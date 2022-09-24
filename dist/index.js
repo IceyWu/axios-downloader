@@ -17,6 +17,7 @@
               responseType: 'blob',
               headers: { 'Content-Type': 'application/json; charset=utf-8' },
               cancelToken: new CancelToken(function executor(c) {
+                  options.cancel = c;
               }),
               onDownloadProgress: function (progress) {
                   const { loaded, total } = progress;

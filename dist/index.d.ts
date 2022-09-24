@@ -4,6 +4,7 @@
  * @fileSize file size
  * @downloadSize download size
  * @downloadProgress download progress
+ * @cancel cancel download
  */
 interface DefaultOptons {
     url: string | undefined;
@@ -11,6 +12,7 @@ interface DefaultOptons {
     fileSize: number;
     downloadSize: number;
     downloadProgress: number;
+    cancel: () => void;
 }
 
 declare function AxDownLoader(options: DefaultOptons): Promise<unknown>;

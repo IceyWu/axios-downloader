@@ -4,6 +4,7 @@
  * @fileSize file size
  * @downloadSize download size
  * @downloadProgress download progress
+ * @cancel cancel download
  */
 export interface DefaultOptons {
   url: string | undefined
@@ -11,4 +12,5 @@ export interface DefaultOptons {
   fileSize: number
   downloadSize: number
   downloadProgress: number
+  cancel: () => void
 }

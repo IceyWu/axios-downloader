@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { DefaultOptons } from '../types/core'
 
-let cancel = () => {}
 
 export default function AxDownLoader(options: DefaultOptons) {
   return new Promise((resolve, reject) => {
@@ -13,7 +12,7 @@ export default function AxDownLoader(options: DefaultOptons) {
       responseType: 'blob',
       headers: { 'Content-Type': 'application/json; charset=utf-8' },
       cancelToken: new CancelToken(function executor(c: any) {
-        cancel = c
+        options.cancel = c
       }),
 
       onDownloadProgress: function (progress: any) {
@@ -34,7 +33,7 @@ export default function AxDownLoader(options: DefaultOptons) {
         URL.revokeObjectURL(link.href)
         resolve(res)
       })
-      .catch((e) => {
+      .catch((e: any) => {
         reject(e)
       })
   })
