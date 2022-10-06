@@ -1,7 +1,8 @@
 ## 🚀 Features
 
 - 🏳‍🌈 **Downloading size**: Monitor download size
-- ⚡ **Downloading downloadProgress**
+- 📦 **Downloading downloadProgress**: Monitor downloadProgress downloadProgress
+- ⚡ **Downloading cancel**: Cancel download
 
 ## 📦 Install
 
@@ -24,6 +25,7 @@ const AxDownLoaderOption = ref({
   fileSize: 0,
   downloadSize: 0,
   downloadProgress: 0,
+  cancel: null,
 })
 
 // downLoad
@@ -35,6 +37,10 @@ const downLoad = function () {
     .catch((err) => {
       console.log('downLoad faild', err)
     })
+}
+// cancel
+const cancel = function () {
+  AxDownLoaderOption.value.cancel()
 }
 ```
 ## 🐱 Demo
